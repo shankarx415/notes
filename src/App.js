@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+
+// Import all Page Components
+import BeeNotes from './pages/BeeNotes';
+import EnglishNotes from './pages/EnglishNotes';
+import ItNotes from './pages/ItNotes';
+import CNotes from './pages/CNotes'; // <--- 1. Make sure this import is here
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Existing Routes */}
+          <Route path="/" element={<BeeNotes />} />
+          <Route path="/english" element={<EnglishNotes />} />
+          <Route path="/it" element={<ItNotes />} />
+
+          {/* New Route - This is what fixes the error */}
+          <Route path="/c-programming" element={<CNotes />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
