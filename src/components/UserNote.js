@@ -33,9 +33,7 @@ const UserNote = () => {
       </style>
 
       <h3 id="note-title">Note</h3>
-      <center>
-      <p> Yesterday, due to an issue with my hosting platform, the website wasn’t working. Now I’ve shifted everything to GitHub Pages. If you want to view my code, you can pull it from: <a href="https://github.com/shankarx415/notes" target="_blank">github.com/shankarx415/notes</a> </p>
-      </center>
+      <p> Yesterday, due to an issue with my previous hosting platform, the website stopped working unexpectedly. I’ve now moved everything to <strong>GitHub Pages</strong> for better stability and reliability. </p> <p> This entire website is built using <strong>React</strong>, and I manage all updates through Git and GitHub. If you're curious about the code or want to suggest improvements, you can check it out here:<br/> <a href="https://github.com/shankarx415/notes" target="_blank">github.com/shankarx415/notes</a> </p>
     </section>
   );
 };
