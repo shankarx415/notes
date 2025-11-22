@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+// CHANGE: Import HashRouter instead of BrowserRouter
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 
 // Import Pages
@@ -20,7 +21,7 @@ function App() {
           <Route path="/it" element={<ItNotes />} />
           <Route path="/c-programming" element={<CNotes />} />
 
-          {/* FIX: Redirect any unknown URL (like /notes) back to Home */}
+          {/* Redirect unknown URLs back to Home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
