@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import SocialBanners from '../components/SocialBanners';
-import UserNote from '../components/UserNotes';
+import UserNote from '../components/UserNote';
 import Footer from '../components/Footer';
 import Question from '../components/Question';
 import useScrollAnimation from '../hooks/useScrollAnimation';

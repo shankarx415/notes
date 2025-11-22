@@ -1,23 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 
-import BeeNotes from './pages/BeeNotes';
+// Import Pages
 import EnglishNotes from './pages/EnglishNotes';
 import ItNotes from './pages/ItNotes';
 import CNotes from './pages/CNotes';
 
 function App() {
   return (
-    <Router basename="/notes">
+    <Router>
       <div className="App">
         <Routes>
-          {/* Default route for /notes/ */}
-          <Route index element={<BeeNotes />} />
-
+          {/* Default Home Page */}
+          <Route path="/" element={<EnglishNotes />} />
+          
+          {/* Specific Pages */}
           <Route path="/english" element={<EnglishNotes />} />
           <Route path="/it" element={<ItNotes />} />
           <Route path="/c-programming" element={<CNotes />} />
+
+          {/* FIX: Redirect any unknown URL (like /notes) back to Home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>

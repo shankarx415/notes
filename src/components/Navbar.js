@@ -10,8 +10,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <button
-          className="nav-toggle"
+        <button 
+          className="nav-toggle" 
           aria-label="Toggle navigation"
           onClick={toggleMenu}
         >
@@ -19,20 +19,22 @@ const Navbar = () => {
         </button>
         <div className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <div className="page-links">
-            <NavLink to="/it" className="page-link" onClick={closeMenu}>
-              <i className="fas fa-network-wired"></i> Networks & E-commerce
-            </NavLink>
+            {/* English Grammar Link */}
             <NavLink to="/english" className="page-link" onClick={closeMenu}>
               <i className="fas fa-language"></i> English Grammar
             </NavLink>
-            <NavLink to="/" className="page-link" onClick={closeMenu}>
-              <i className="fas fa-bolt"></i> BEEE
+            
+            {/* IT Essentials Link */}
+            <NavLink to="/it" className="page-link" onClick={closeMenu}>
+              <i className="fas fa-network-wired"></i> Networks & E-commerce
             </NavLink>
-            {/* Add the C Programming Link Here */}
+            
+            {/* C Programming Link */}
             <NavLink to="/c-programming" className="page-link" onClick={closeMenu}>
               <i className="fas fa-code"></i> C Programming
             </NavLink>
           </div>
+          
           <a href="https://instagram.com/_shankar_831/" target="_blank" rel="noreferrer" className="social-link">
             <i className="fab fa-instagram"></i> Follow
           </a>
