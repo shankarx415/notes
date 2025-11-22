@@ -1,3 +1,4 @@
+/* 
 import React from 'react';
 
 const SocialBanners = () => {
@@ -21,3 +22,4 @@ const SocialBanners = () => {
 };
 
 export default SocialBanners;
+*/
